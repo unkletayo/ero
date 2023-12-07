@@ -1,39 +1,39 @@
-import { Toaster } from "sonner";
-import { Inter } from 'next/font/google'
-import type { Metadata } from 'next'
+import { Toaster } from 'sonner';
+import { Inter } from 'next/font/google';
+import type { Metadata } from 'next';
 
-import { ThemeProvider } from '@/components/providers/theme-provider'
-import { ConvexClientProvider } from '@/components/providers/convex-provider'
-import { ModalProvider } from "@/components/providers/modal-provider";
-import { EdgeStoreProvider } from "@/lib/edgestore";
+import { ThemeProvider } from '@/components/providers/theme-provider';
+import { ConvexClientProvider } from '@/components/providers/convex-provider';
+import { ModalProvider } from '@/components/providers/modal-provider';
+import { EdgeStoreProvider } from '@/lib/edgestore';
 
-import './globals.css'
+import './globals.css';
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Jotion',
+  title: 'Ero',
   description: 'The connected workspace where better, faster work happens.',
   icons: {
     icon: [
       {
-        media: "(prefers-color-scheme: light)",
-        url: "/logo.svg",
-        href: "/logo.svg",
+        media: '(prefers-color-scheme: light)',
+        url: '/logo.svg',
+        href: '/logo.svg',
       },
       {
-        media: "(prefers-color-scheme: dark)",
-        url: "/logo-dark.svg",
-        href: "/logo-dark.svg",
-      }
-    ]
-  }
-}
+        media: '(prefers-color-scheme: dark)',
+        url: '/logo-dark.svg',
+        href: '/logo-dark.svg',
+      },
+    ],
+  },
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
@@ -45,7 +45,7 @@ export default function RootLayout({
               defaultTheme="system"
               enableSystem
               disableTransitionOnChange
-              storageKey="jotion-theme-2"
+              storageKey="Ero-theme-2"
             >
               <Toaster position="bottom-center" />
               <ModalProvider />
@@ -55,5 +55,5 @@ export default function RootLayout({
         </ConvexClientProvider>
       </body>
     </html>
-  )
+  );
 }
