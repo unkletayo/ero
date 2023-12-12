@@ -13,7 +13,7 @@ import { Button } from '@/components/ui/button';
 const DocumentsPage = () => {
   const router = useRouter();
   const { user } = useUser();
-  const create = useMutation(api.documents.create);
+  const create = useMutation(api.document.create);
 
   const onCreate = () => {
     const promise = create({ title: 'Untitled' }).then((documentId) =>
