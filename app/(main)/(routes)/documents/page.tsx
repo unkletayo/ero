@@ -25,6 +25,10 @@ const DocumentsPage = () => {
       success: 'New note created!',
       error: 'Failed to create a new note.',
     });
+
+    promise.then(() => {
+      router.refresh();
+    });
   };
 
   return (
