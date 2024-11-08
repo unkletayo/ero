@@ -90,12 +90,12 @@ export const TrashBox = () => {
               {document.title}
             </span>
             <div className="flex items-center">
-              <button
+              <div
                 onClick={(e) => onRestore(e, document._id)}
                 className="rounded-sm p-2 hover:bg-neutral-200 dark:hover:bg-neutral-600"
               >
                 <Undo className="h-4 w-4 text-muted-foreground" />
-              </button>
+              </div>
               <ConfirmModal onConfirm={() => onRemove(document._id)}>
                 <button className="rounded-sm p-2 hover:bg-neutral-200 dark:hover:bg-neutral-600">
                   <Trash className="h-4 w-4 text-muted-foreground" />
